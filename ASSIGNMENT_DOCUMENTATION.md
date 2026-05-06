@@ -76,16 +76,26 @@ I tested the program multiple times to verify stable counter values and correct 
 
 ---
 
-### Entry 3 - [Date, Time]
+### Entry 3 - [2026-05-06, 7:30 PM]
 **What I implemented**: 
+
+Added Semaphore(1) in run() and runToCompletion() to control CPU access and completed the documentation.
 
 **Challenges encountered**: 
 
+Understanding how semaphores control concurrent execution.
+
 **How I solved it**: 
+
+I used acquire() before execution and release() inside finally blocks.
 
 **Testing approach**: 
 
+I tested the program several times and confirmed that only one process executes in the CPU section at a time.
+
 **Time spent**: 
+
+1.5 hours
 
 ---
 
