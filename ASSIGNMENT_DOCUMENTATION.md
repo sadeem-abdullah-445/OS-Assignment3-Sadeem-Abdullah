@@ -33,14 +33,19 @@ Document your development process with **minimum 3 entries** showing progression
 
 ### Entry 1 - [2026-05-06, 2:00 PM]
 **What I implemented**: 
+
 Set up the repository, updated the student ID, and reviewed the scheduler simulation code.
 **Challenges encountered**: 
+
 Understanding the shared resources and identifying possible race conditions.
 **How I solved it**: 
+
 I analyzed the shared variables and checked where multiple threads access the same data.
 **Testing approach**: 
+
 I tested the original program before adding synchronization.
-**Time spent**: 
+**Time spent**:
+
 30 minutes
 ---
 
