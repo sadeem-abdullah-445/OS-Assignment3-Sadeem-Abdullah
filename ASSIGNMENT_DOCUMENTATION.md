@@ -53,16 +53,26 @@ I tested the original program before adding synchronization.
 
 ---
 
-### Entry 2 - [Date, Time]
+### Entry 2 - [2026-05-06, 4:30 PM]
 **What I implemented**: 
+
+Added ReentrantLock objects for contextSwitchCount, completedProcessCount, totalWaitingTime, and executionLog.
 
 **Challenges encountered**: 
 
+Making sure every lock is released correctly.
+
 **How I solved it**: 
+
+I used try-finally blocks with lock() and unlock() methods.
 
 **Testing approach**: 
 
+I tested the program multiple times to verify stable counter values and correct logging.
+
 **Time spent**: 
+
+1 hour
 
 ---
 
