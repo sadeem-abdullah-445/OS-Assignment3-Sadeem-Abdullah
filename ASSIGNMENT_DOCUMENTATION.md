@@ -38,15 +38,19 @@ Set up the repository, updated the student ID, and reviewed the scheduler simula
 **Challenges encountered**: 
 
 Understanding the shared resources and identifying possible race conditions.
+
 **How I solved it**: 
 
 I analyzed the shared variables and checked where multiple threads access the same data.
+
 **Testing approach**: 
 
 I tested the original program before adding synchronization.
+
 **Time spent**:
 
 30 minutes
+
 ---
 
 ### Entry 2 - [Date, Time]
