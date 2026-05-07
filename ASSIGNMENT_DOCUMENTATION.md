@@ -372,7 +372,9 @@ Synchronization should protect shared resources correctly even when the number o
 
 ### What I learned about synchronization:
 
-[6-8 sentences about key concepts, challenges, insights]
+I learned that synchronization is important when multiple threads use shared resources. Without synchronization, race conditions can cause incorrect results. I learned how ReentrantLock protects shared data and how Semaphore controls CPU access between threads. I also learned that try-finally is important to make sure locks are always released. Fine-grained locking improves concurrency because independent resources do not block each other. Overall, synchronization makes multithreaded programs more stable and predictable.
+
+
 
 ---
 
@@ -382,13 +384,18 @@ Give TWO examples where synchronization is critical:
 
 **Example 1**: 
 
+Banking systems use synchronization to prevent multiple transactions from updating the same account balance incorrectly.
+
 **Example 2**: 
+
+Print servers use semaphores to control how many users can access printers at the same time.
 
 ---
 
 ### How I would explain synchronization to others:
 
-[Explain to someone who just finished Assignment 1 - use simple terms and analogies]
+Synchronization is a way to organize how threads share resources safely. It is similar to giving only one person access to a shared object at a time to avoid conflicts. Locks protect shared data from race conditions, while semaphores control how many threads can use a resource simultaneously. Without synchronization, multithreaded programs may produce inconsistent or incorrect results.
+
 
 ---
 
