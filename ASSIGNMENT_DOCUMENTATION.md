@@ -415,7 +415,7 @@ Synchronization is a way to organize how threads share resources safely. It is s
 https://github.com/sadeem-abdullah-445/OS-Assignment3-Sadeem-Abdullah.git
 
 **Number of commits**: 
-
+34
 **Commit messages**: 
 1. Set my student ID: 445052054
 2. Added ReentrantLock and Semaphore for synchronization
