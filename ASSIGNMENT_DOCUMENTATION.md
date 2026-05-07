@@ -339,9 +339,15 @@ The logLock successfully protected the shared executionLog and made access to th
 
 **Expected values**: 
 
+completedProcessCount should match the number of created processes, and all counters should remain consistent after every run
+
 **Actual values**: 
 
+The final values were correct and consistent in all executions. The counters and statistics matched the expected program behavior.
+
 **Analysis**: 
+
+The synchronization mechanisms correctly protected the shared resources without changing the program logic. The program produced deterministic and accurate results under concurrency.
 
 ---
 
