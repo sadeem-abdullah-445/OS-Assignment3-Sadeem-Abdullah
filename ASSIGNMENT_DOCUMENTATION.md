@@ -293,15 +293,26 @@ The semaphore controls CPU access and prevents multiple processes from executing
 **Testing procedure**: 
 ```bash
 # Commands used (run the program at least 5 times)
+
+I ran the program using java SchedulerSimulationSync five times and compared the output results after each run.
+
 ```
 
 **Results**: 
 (Show that running multiple times produces consistent, correct results)
 
+The results were consistent in every run. The values of contextSwitchCount, completedProcessCount, and waiting time statistics remained correct and stable.
+
+
 **Why synchronization is necessary**: 
 (Explain what race conditions COULD occur without synchronization, even if you didn't observe them. Explain which shared resources need protection and why.)
 
+Without synchronization, multiple threads could update shared counters at the same time, causing race conditions and incorrect values. The shared executionLog could also experience missing entries or ConcurrentModificationException because ArrayList is not thread-safe.
+
+
 **Conclusion**: 
+
+Synchronization using ReentrantLock and Semaphore successfully protected shared resources and ensured deterministic program behavior.
 
 ---
 
