@@ -352,13 +352,19 @@ The synchronization mechanisms correctly protected the shared resources without 
 ---
 
 ### Test 4: Different Scenarios
-**Scenario tested**: [e.g., different time quantum, more processes, etc.]
+**Scenario tested**: [I tested the program with different generated values, such as different time quantum and number of processes based on the student ID seed.]
 
 **Purpose**: 
 
+To verify that the synchronization still works correctly under different scheduling conditions.
+
 **Results**: 
 
+The program still executed correctly, and the shared counters and execution log remained consistent.
+
 **What I learned**: 
+
+Synchronization should protect shared resources correctly even when the number of processes or execution timing changes.
 
 ---
 
