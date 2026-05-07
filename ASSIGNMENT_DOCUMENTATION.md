@@ -321,9 +321,16 @@ Synchronization using ReentrantLock and Semaphore successfully protected shared 
 
 **Testing procedure**: 
 
+I ran the program many times with multiple threads writing to the execution log simultaneously.
+
+
 **Results**: 
 
+No ConcurrentModificationException or missing log entries occurred during execution.
+
 **What this proves**: 
+
+The logLock successfully protected the shared executionLog and made access to the ArrayList thread-safe.
 
 ---
 
