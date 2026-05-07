@@ -403,13 +403,15 @@ Synchronization is a way to organize how threads share resources safely. It is s
 
 **Repository URL**: 
 
+https://github.com/sadeem-abdullah-445/OS-Assignment3-Sadeem-Abdullah.git
+
 **Number of commits**: 
 
 **Commit messages**: 
-1. 
-2. 
-3. 
-4. 
+1. Set my student ID: 445052054
+2. Added ReentrantLock and Semaphore for synchronization
+3. Protected context switch counter with lock
+4. Protected completed process counter with lock
 
 ---
 
@@ -417,14 +419,20 @@ Synchronization is a way to organize how threads share resources safely. It is s
 
 **Total time spent on assignment**: 
 
+Approximately 8 hour
+
 **Key takeaways**: 
-1. 
-2. 
-3. 
+1. Synchronization prevents race conditions.
+2. ReentrantLock protects shared resources.
+3. Semaphore controls concurrent access.
 
 **Most challenging aspect**: 
 
+Understanding how to protect shared resources without reducing concurrency.
+
 **What I'm most proud of**: 
+
+The program runs correctly with consistent results and no synchronization errors.
 
 ---
 
