@@ -146,7 +146,9 @@ The second race condition was in executionLog.add(message). The shared resource 
 
 **Your Answer**:
 
-[Your answer here - explain your implementation choices]
+[ReentrantLock is used for mutual exclusion, which means only one thread can enter a protected critical section at a time. In my code, I used ReentrantLock to protect the shared counters and the execution log, such as contextSwitchLock, completedProcessLock, waitingTimeLock, and logLock.
+
+Semaphore controls how many threads can access a resource at the same time. In my code, I used Semaphore(1) as a binary semaphore for CPU access in run() and runToCompletion(). This ensures that only one process uses the simulated CPU at a time.]
 
 ---
 
