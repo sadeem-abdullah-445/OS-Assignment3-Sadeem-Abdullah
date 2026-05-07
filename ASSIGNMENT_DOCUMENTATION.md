@@ -99,16 +99,25 @@ I tested the program several times and confirmed that only one process executes 
 
 ---
 
-### Entry 4 - [Date, Time]
+### Entry 4 - [2026-05-06, 10:30 PM]
 **What I implemented**: 
+
+Recorded the demonstration video, updated the ASSIGNMENT_DOCUMENTATION.md file with the video link, and reviewed the final repository before submission.
 
 **Challenges encountered**: 
 
+Ensuring that the video link was accessible and that all assignment requirements were included.
+
 **How I solved it**: 
+
+I tested the Google Drive link in private mode and reviewed the documentation and repository carefully.
 
 **Testing approach**: 
 
+I verified that the program runs correctly and that all synchronization features work without errors.
+
 **Time spent**: 
+45 minutes
 
 ---
 
