@@ -172,7 +172,9 @@ I also avoided nested locks in my code. Each method uses only one lock at a time
 
 **Your Answer**:
 
-[Your answer here - explain coarse-grained vs fine-grained locking, independence of counters, concurrency implications. Show understanding of when to use each approach. 5-8 sentences expected.]
+[I used separate locks for each counter, which is fine-grained locking. In my code, I used contextSwitchLock for contextSwitchCount, completedProcessLock for completedProcessCount, and waitingTimeLock for totalWaitingTime. I chose this design because the three counters are independent and do not need to block each other.
+
+Fine-grained locking gives better concurrency because one thread can update contextSwitchCount while another thread updates completedProcessCount. The trade-off is that it requires more code and careful handling. A single coarse-grained lock would be simpler, but it would reduce concurrency because all counter updates would wait for the same lock.]
 
 ---
 
