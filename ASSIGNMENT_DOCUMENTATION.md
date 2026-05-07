@@ -256,16 +256,32 @@ Exclusive access is required to preserve the integrity and correct order of the 
 
 **Purpose of semaphore**: 
 
+To simulate a single-core CPU and ensure that only one process executes at a time.
+
 **Number of permits and why**: 
 
+I used Semaphore(1) with one permit because only one process should access the simulated CPU at a time.
+
 **Where implemented**: 
+
+The semaphore was implemented in run() and runToCompletion() methods.
 
 **Code snippet**:
 ```java
 // Paste your implementation here
+
+SharedResources.cpuSemaphore.acquire();
+try {
+    // execution code
+} finally {
+    SharedResources.cpuSemaphore.release();
+}
+
 ```
 
 **Effect on program behavior**: 
+
+The semaphore controls CPU access and prevents multiple processes from executing simultaneously. This makes the simulation behave like a real single-core CPU system.
 
 ---
 
