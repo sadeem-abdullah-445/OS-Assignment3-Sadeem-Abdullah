@@ -184,16 +184,33 @@ Fine-grained locking gives better concurrency because one thread can update cont
 
 **Which variables**: 
 
+contextSwitchCount, completedProcessCount, and totalWaitingTime.
+
 **Why they need protection**: 
 
+These variables are shared between multiple process threads. They need protection because increment and addition operations are not atomic, so concurrent updates can cause lost updates and incorrect statistics.
+
 **Synchronization mechanism used**: 
+
+I used separate ReentrantLock objects: contextSwitchLock, completedProcessLock, and waitingTimeLock.
 
 **Code snippet**:
 ```java
 // Paste your implementation here
 ```
+public static void incrementContextSwitch() {
+    contextSwitchLock.lock();
+    try {
+        contextSwitchCount++;
+    } finally {
+        contextSwitchLock.unlock();
+    }
+}
+
 
 **Justification**: 
+
+Each counter has its own lock because the counters are independent. This protects the shared data while allowing better concurrency than using one lock for all counters.
 
 ---
 
