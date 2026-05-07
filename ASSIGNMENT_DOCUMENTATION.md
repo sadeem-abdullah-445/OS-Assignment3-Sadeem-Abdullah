@@ -197,7 +197,7 @@ I used separate ReentrantLock objects: contextSwitchLock, completedProcessLock, 
 **Code snippet**:
 ```java
 // Paste your implementation here
-```
+
 public static void incrementContextSwitch() {
     contextSwitchLock.lock();
     try {
@@ -206,6 +206,9 @@ public static void incrementContextSwitch() {
         contextSwitchLock.unlock();
     }
 }
+
+```
+
 
 
 **Justification**: 
