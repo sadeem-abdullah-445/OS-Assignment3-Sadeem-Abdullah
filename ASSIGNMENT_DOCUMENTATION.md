@@ -135,7 +135,9 @@ I tested the program several times and confirmed that only one process executes 
 
 **Your Answer**:
 
-[Your answer here - 4-6 sentences with code examples]
+[The first race condition was in the shared counters such as contextSwitchCount++ and completedProcessCount++. Multiple threads could update these variables at the same time, causing lost updates and incorrect final counter values.
+
+The second race condition was in executionLog.add(message). The shared resource was the ArrayList<String> executionLog, which is not thread-safe. Concurrent access could cause missing log entries or ConcurrentModificationException.]
 
 ---
 
