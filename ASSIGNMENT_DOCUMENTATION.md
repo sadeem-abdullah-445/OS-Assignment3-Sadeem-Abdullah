@@ -221,16 +221,34 @@ Each counter has its own lock because the counters are independent. This protect
 
 **What resource**: 
 
+ArrayList<String> executionLog.
+
 **Why it needs protection**: 
 
+The execution log is shared between multiple threads. Since ArrayList is not thread-safe, concurrent add() operations could cause missing log entries or ConcurrentModificationException.
+
 **Synchronization mechanism used**: 
+
+I used ReentrantLock logLock to protect the execution log.
 
 **Code snippet**:
 ```java
 // Paste your implementation here
+
+public static void logExecution(String message) {
+    logLock.lock();
+    try {
+        executionLog.add(message);
+    } finally {
+        logLock.unlock();
+    }
+}
+
 ```
 
 **Justification**: 
+
+Exclusive access is required to preserve the integrity and correct order of the execution log.
 
 ---
 
