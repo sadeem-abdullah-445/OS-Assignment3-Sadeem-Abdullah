@@ -157,7 +157,9 @@ Semaphore controls how many threads can access a resource at the same time. In m
 
 **Your Answer**:
 
-[Your answer here - reference try-finally blocks, lock ordering, etc.]
+[Deadlock happens when two or more threads wait forever because each one is holding a resource and waiting for another resource to be released. To prevent deadlock, I used try-finally blocks so every lock() is always followed by unlock() even if an error occurs.
+
+I also avoided nested locks in my code. Each method uses only one lock at a time, such as contextSwitchLock, completedProcessLock, waitingTimeLock, or logLock. For the semaphore, I used acquire() before CPU execution and release() inside the finally block, so the CPU permit is always returned.]
 
 ---
 
